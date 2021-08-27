@@ -1,0 +1,51 @@
+<html>
+<head>
+		<title>Flaschenzähler</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script>
+		
+		function fRechner() {
+
+			var vAusgabe="";
+			var vFlaschen;
+			var vStart=1;
+			
+			vFlaschen=document.getElementById("idFlaschen").value;
+			
+			while(vStart<=vFlaschen){
+			
+			if(vStart>1){
+			
+			vAusgabe=vAusgabe + vStart + " Flaschen </br>";
+			
+			}
+			else {
+	
+			vAusgabe=vAusgabe + vStart + " Flasche </br>";
+			
+			}
+			vStart++;
+			}
+			
+			
+						
+			document.getElementById("idAusgabeHtml").innerHTML = vAusgabe;
+			}
+
+
+
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+	<h1>Flaschenzähler</h1>
+		<p>Anzahl der Flaschen<input id="idFlaschen" value="12" size="4	">
+		<button onClick="fRechner();">Zähle!</button>
+		<div id="idAusgabeHtml"></div>
+	</body>
+</html>
